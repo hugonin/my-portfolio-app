@@ -1,0 +1,51 @@
+.contact-form {
+    display: grid;
+}
+
+label {
+    font-weight: 900;
+}
+
+input, 
+textarea {
+    margin-bottom: .5em;
+    padding: .4em;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+@media (min-width: 600px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "title form"
+            "subtitle form";
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--contact {
+        grid-area: title;
+    }
+    
+    .section__subtitle--contact {
+        grid-area: subtitle;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        position: relative;
+        margin-top: 2.5em;
+       
+    }
+    
+    .contact-form {
+        grid-area: form;
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        z-index: 2;
+    }
+}

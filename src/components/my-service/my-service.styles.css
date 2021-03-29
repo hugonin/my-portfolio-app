@@ -1,0 +1,40 @@
+.my-services {
+    background-color: #14274e;
+    background-image: url(../../assets/services-bg.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #f1f6f9;
+    text-align: center;
+}
+
+
+.section__title--services {
+    color: #9ba4b4;
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: #f1f6f9;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+}
