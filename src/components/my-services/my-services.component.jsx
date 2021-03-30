@@ -1,15 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import EntryService from '../entry-service/entry-service.component';
+import serviceList from '../../serviceList';
 
-import './my-service.styles.css';
+import './my-services.styles.css';
 
-const MyService = ({id, title, content}) => (
+const MyServices = () => (
     <div>
         <section className="my-services" id="services" data-nav="Services" >
             <h2 className="section__title section__title--services">What I do</h2>
             <div className="services">
-                <h3>{title}</h3>
-                <p>{content}</p>            
+            {serviceList.map((serviceItem) => (
+            <EntryService
+                key={serviceItem.id}
+                title={serviceItem.title}
+                content={serviceItem.content}
+            />
+            ))}              
             </div> 
 
             <Router>
@@ -22,4 +29,4 @@ const MyService = ({id, title, content}) => (
     </div>
 )
 
-export default MyService;
+export default MyServices

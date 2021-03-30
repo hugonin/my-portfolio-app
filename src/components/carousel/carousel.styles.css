@@ -89,41 +89,6 @@
 .is-hidden { display: none; }
 
 
-.portfolio__item {
-    margin-bottom: 2em; 
-}
-
-.btn, .secondary-btn {
-    margin-bottom: 2em;
-}
 
 
- @media (min-width: 600px) {
-    .portfolio {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-         grid-template-areas: 
-             "img title"
-             "img content"
-             "img btn";
-         grid-column-gap: 1em;
-    }
-    .portfolio__content {
-        align-self: center;
-    }
-    .portfolio__img {
-        grid-area: img;
-        max-width: 400px;
-    }
-    .portfolio__item-title {
-        grid-area: title;
-    }
-    .portfolio__item-desc {
-        grid-area: content;
-    }
-    .btn {
-        grid-area: btn;
-    }
- } 
 

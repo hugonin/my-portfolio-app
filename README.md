@@ -21,15 +21,7 @@ List of features (still in development):
 * Carousel
 * Responsive navigation
 
-###Issues with Webpack latest version
 
-The compilation will fail due to a problem of Webpack version 4.4.2 vs 5.2
-
-Follow the instructions that appears in the console, if it does not work just add in .env file the following:
-
-`
-SKIP_PREFLIGHT_CHECK=true
-`
 
 ## Status
 Project is: _in progress_  
