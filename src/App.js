@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-import Header from './components/header/header.component';
+import Navbar from './components/navbar/navbar.component';
 import Introduction from './components/introduction/introduction.component';
 import MyServices from './components/my-services/my-services.component'
 import About from './components/about/about.component';
@@ -12,16 +12,15 @@ import Footer from './components/footer/footer.component';
 
 function App() {
   return (
-    <div>
-     <Header />
+    <>
+     <Navbar />
      <Introduction />
      <MyServices />
      <About />
      <MyWork />
      <Contact />
-     <Footer />
-     
-    </div>
+     <Footer />     
+    </>
   );
 }
 

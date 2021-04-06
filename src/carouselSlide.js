@@ -1,11 +1,8 @@
-import imageSlide1  from './assets/portfolio-01.jpg';
-import imageSlide2  from './assets/portfolio-02.jpg';
-import imageSlide3  from './assets/portfolio-03.jpg';
 
 const carouselSlide = [
     {
         id: 1,
-        image: { imageSlide1 },
+        image: "/images/portfolio-01.jpg",
         title: "Hacker News Clone",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         linkLive: "#",
@@ -13,7 +10,7 @@ const carouselSlide = [
     },
     {
         id: 2,
-        image: { imageSlide2 },
+        image: "/images/portfolio-02.jpg",
         title: "Quote Generator",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         linkLive: "#",
@@ -21,7 +18,7 @@ const carouselSlide = [
     },
     {
         id: 3,
-        image: { imageSlide3 },
+        image: "/images/portfolio-03.jpg",
         title: "Google Keep Clone",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         linkLive: "#",
