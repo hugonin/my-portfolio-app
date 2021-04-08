@@ -10,9 +10,9 @@ const Introduction = () => (
                 <h1 className="section__title section__title--intro">
                     Hello, I'm <strong>Jean DOE</strong>
                 </h1>
-                <p className="section__subtitle section__subtitle--intro">front-end dev</p>
-                <img src={introImage} alt="IntroImage" className="intro__img" />    
+                <p className="section__subtitle section__subtitle--intro">front-end dev</p>         
             </div>
+            <div><img src={introImage} alt="IntroImage" className="intro__img" /></div>
            
         </section>
     </div>

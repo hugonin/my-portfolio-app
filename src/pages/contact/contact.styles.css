@@ -1,3 +1,8 @@
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .contact-form {
     display: grid;
 }

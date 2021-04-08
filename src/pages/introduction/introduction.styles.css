@@ -13,7 +13,7 @@
     .intro {
         display: grid;
         padding: 10em 2em;
-        grid-column-gap: 2em;
+        grid-column-gap: 1em;
         grid-template-areas: 
             "title img"
             "subtitle img";

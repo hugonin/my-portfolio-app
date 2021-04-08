@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import EntryService from '../entry-service/entry-service.component';
+import EntryService from '../../components/entry-service/entry-service.component';
 import serviceList from '../../serviceList';
 
 import './my-services.styles.css';
