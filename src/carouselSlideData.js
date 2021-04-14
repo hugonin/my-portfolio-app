@@ -1,5 +1,5 @@
 
-const carouselSlide = [
+const carouselSlideData = [
     {
         id: 1,
         image: "/images/portfolio-01.jpg",
@@ -27,4 +27,4 @@ const carouselSlide = [
 
 ];
 
-export default carouselSlide;
+export default carouselSlideData;

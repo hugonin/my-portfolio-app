@@ -8,7 +8,7 @@ const Contact = () => (
             <h2 className="section__title section__title--contact">Contact</h2>
             <p className="section__subtitle section__subtitle--contact">Interested in My Work?</p>
             
-            <div class="contact-form">
+            <div className="contact-form">
                 <form className="contact-form" action="#" method="POST">
                 
                 <label className="fname-label" for="fname"></label>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 import './entry-carousel.styles.css';
 
-const EntryCarousel = ({id, image, title, description,linkLive, linkCode}) =>(
+const EntryCarousel = ({ info: { image, title, description,linkLive, linkCode } }) => (
     <div>
         <li className="carousel__slide">
             <img className="carousel__image" src={image} alt="" />
