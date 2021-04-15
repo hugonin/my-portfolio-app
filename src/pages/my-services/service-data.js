@@ -1,4 +1,4 @@
-const serviceList = [
+const SERVICE_DATA = [
     {
         id: 1,
         title: "Responsive design",
@@ -19,4 +19,4 @@ const serviceList = [
     }
 ];
 
-export default serviceList;
+export default SERVICE_DATA;

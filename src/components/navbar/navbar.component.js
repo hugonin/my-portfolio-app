@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-//import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Link } from 'react-router-dom'
 
 import './navbar.styles.css'

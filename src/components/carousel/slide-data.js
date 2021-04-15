@@ -1,5 +1,5 @@
 
-const carouselSlideData = [
+const SLIDE_DATA = [
     {
         id: 1,
         image: "/images/portfolio-01.jpg",
@@ -27,4 +27,4 @@ const carouselSlideData = [
 
 ];
 
-export default carouselSlideData;
+export default SLIDE_DATA;

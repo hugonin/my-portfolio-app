@@ -1,6 +1,6 @@
 import React from "react";
 import EntryCarousel from "../entry-carousel/entry-carousel.component";
-import carouselSlideData from "../../carouselSlideData";
+import SLIDE_DATA from "./slide-data"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import "./carousel.styles.css";
@@ -11,22 +11,22 @@ class Carousel extends React.Component {
       super(props);
 
       this.state = {
-        carouselSlideData,
+        slides: SLIDE_DATA,
         currentIndex: 0
       };
     }
 
     prevSlide = () => {
-      const { carouselSlideData, currentIndex } = this.state;
+      const { slides, currentIndex } = this.state;
       if (currentIndex === 0) {
-        return this.setState({ currentIndex: carouselSlideData.length - 1 });
+        return this.setState({ currentIndex: slides.length - 1 });
       }
       this.setState({ currentIndex: currentIndex - 1 });
     };
   
     nextSlide = () => {
-      const { currentIndex, carouselSlideData } = this.state;
-      if (currentIndex === carouselSlideData.length - 1) {
+      const { currentIndex, slides } = this.state;
+      if (currentIndex === slides.length - 1) {
         return this.setState({ currentIndex: 0 });
       }
       this.setState({ currentIndex: currentIndex + 1 });
@@ -38,28 +38,37 @@ class Carousel extends React.Component {
     };
 
     render() {
-      const { carouselSlideData, currentIndex } = this.state;
+      const { slides, currentIndex } = this.state;
+      let isButtonHidden = {
+        display: "block"
+      }
+      currentIndex === 0 ? isButtonHidden.display = "none" : isButtonHidden.display = "block"
+       
+
+    
       return (
         <div className="carousel">
-          <FaChevronLeft className="carousel__button carousel__button--left is-hidden" onClick={this.prevSlide}  />
+          <FaChevronLeft className="carousel__button carousel__button--left" style= {isButtonHidden}  onClick={this.prevSlide}  />
           <div className="carousel__track-container">
             <ul className="carousel__track">
-              <EntryCarousel key={carouselSlideData[currentIndex].id} info={carouselSlideData[currentIndex]} />
+              <EntryCarousel key={slides[currentIndex].id} info={slides[currentIndex]} />
             </ul>
           </div>
          
           <div className="carousel__nav">
-            {carouselSlideData.map(item => {
-              let bgColor = "##9ba4b4";
+            {slides.map(item => {
+              let divStyle = {
+                backgroundColor: "#f1f6f9",
+              }
               if (currentIndex + 1 === +item.id) {
-                bgColor = "#f1f6f9";
+                divStyle.backgroundColor = "#9ba4b4"
                 
               }
               return (
                 <button 
                   className="carousel__indicator current-slide"
                   key={item.id}
-                  bgColor={bgColor}
+                  style= {divStyle}
                   onClick={() => this.indexSlide(item)}>
                 </button>
               );
@@ -67,7 +76,7 @@ class Carousel extends React.Component {
           </div>
          
             
-          <FaChevronRight className="carousel__button carousel__button--right" onClick={this.nextSlide}  />
+          <FaChevronRight className="carousel__button carousel__button--right"   onClick={this.nextSlide}  />
      
         </div>
    
