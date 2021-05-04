@@ -48,7 +48,7 @@ const Navbar = ({ toggle }) => {
                 duration={250}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-90}
                 
               >
                 My Services
@@ -63,7 +63,7 @@ const Navbar = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-90}
               >
                 About
               </LinkScroll>
@@ -77,7 +77,7 @@ const Navbar = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-90}
               >
                 My Work
               </LinkScroll>
@@ -91,7 +91,7 @@ const Navbar = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-90}
               >
                 Contact
               </LinkScroll>
