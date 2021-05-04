@@ -28,7 +28,7 @@ const Navbar = ({ toggle }) => {
     <>
       <nav
         className="navbar"
-        scrollnav={scrollNav}
+        scrollnav={true.toString()}
         style={{ background: scrollNav ? "#f1f6f9" : "transparent" }}
       >
         <div className="navbar-container">
@@ -42,12 +42,14 @@ const Navbar = ({ toggle }) => {
             <li className="nav-item">
               <LinkScroll
                 className="nav-links"
+                activeClass="active"
                 to="services"
                 smooth={true}
                 duration={250}
                 spy={true}
                 exact="true"
                 offset={-80}
+                
               >
                 My Services
               </LinkScroll>
@@ -55,6 +57,7 @@ const Navbar = ({ toggle }) => {
             <li className="nav-item">
               <LinkScroll
                 className="nav-links"
+                activeClass="active"
                 to="about"
                 smooth={true}
                 duration={500}
@@ -68,6 +71,7 @@ const Navbar = ({ toggle }) => {
             <li className="nav-item">
               <LinkScroll
                 className="nav-links"
+                activeClass="active"
                 to="work"
                 smooth={true}
                 duration={500}
@@ -81,6 +85,7 @@ const Navbar = ({ toggle }) => {
             <li className="nav-item">
               <LinkScroll
                 className="nav-links"
+                activeClass="active"
                 to="contact"
                 smooth={true}
                 duration={500}
