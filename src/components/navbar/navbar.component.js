@@ -1,72 +1,101 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa";
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
-import './navbar.styles.css'
+import "./navbar.styles.css";
 
-function Navbar() {
-    const [click, setClick] = useState(false);
+const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState();
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
 
-    return (
-      <>
-        <nav className="navbar">
-          <div className="navbar-container">
-            <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
-              My Company
-            </Link>
-            <div className="menu-icon" onClick={handleClick}>
-              <i className={click ? "fas fa-times" : "fas fa-bars"} />
-            </div>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/services"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  My Services
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/about"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/work"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  My Work
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/contact"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+  return (
+    <>
+      <nav
+        className="navbar"
+        scrollnav={scrollNav}
+        style={{ background: scrollNav ? "#f1f6f9" : "transparent" }}
+      >
+        <div className="navbar-container">
+          <LinkRouter className="navbar-logo" to="/" onClick={toggleHome}>
+            My Company
+          </LinkRouter>
+          <div className="menu-icon" onClick={toggle}>
+            <FaBars />
           </div>
-        </nav>
-      </>
-    );
-}
+          <ul className="nav-menu">
+            <li className="nav-item">
+              <LinkScroll
+                className="nav-links"
+                to="services"
+                smooth={true}
+                duration={250}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                My Services
+              </LinkScroll>
+            </li>
+            <li className="nav-item">
+              <LinkScroll
+                className="nav-links"
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                About
+              </LinkScroll>
+            </li>
+            <li className="nav-item">
+              <LinkScroll
+                className="nav-links"
+                to="work"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                My Work
+              </LinkScroll>
+            </li>
+            <li className="nav-item">
+              <LinkScroll
+                className="nav-links"
+                to="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Contact
+              </LinkScroll>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
