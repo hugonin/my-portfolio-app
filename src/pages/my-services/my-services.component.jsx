@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link as LinkScroll } from "react-scroll";
 import EntryService from '../../components/entry-service/entry-service.component';
 import SERVICE_DATA from './service-data'
 
@@ -20,9 +21,9 @@ const MyServices = () => (
             </div> 
 
             <Router>
-                <Link className="btn" to="/work">
+                <LinkScroll className="btn" to="work">
                     See My Work
-                </Link>
+                </LinkScroll>
             </Router>
         </section>
 
